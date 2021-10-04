@@ -1,0 +1,6 @@
+[submodule "guttersynth-sc"]
+	path = guttersynth-sc
+	url = https://github.com/madskjeldgaard/guttersynth-sc
+[submodule "supercollider"]
+	path = supercollider
+	url = https://github.com/supercollider/supercollider
