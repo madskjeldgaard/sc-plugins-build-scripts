@@ -9,7 +9,7 @@ git clone --recurse-submodule https://github.com/madskjeldgaard/sc-plugins-build
 cd sc-plugins-build-scripts
 ```
 
-Then run one of the build scripts like so:
+Then run one of the build scripts like so to build and install a plugin package:
 
 ```bash 
 ./guttersynth-sc x86_64
