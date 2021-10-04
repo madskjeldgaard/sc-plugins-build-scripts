@@ -1,7 +1,7 @@
 INSTALL_LOCATION="$HOME/Library/Application Support/SuperCollider/Extensions"
 SC_LOCATION="../supercollider"
 SCRIPTS_HOME="$(pwd)"
-PROJECT_DIR="guttersynth-sc"
+PROJECT_DIR="supercollider-safety-limiter"
 OSX_ARCH=$1
 
 if [ -z "$OSX_ARCH" ]; then

@@ -4,3 +4,9 @@
 [submodule "supercollider"]
 	path = supercollider
 	url = https://github.com/supercollider/supercollider
+[submodule "supercollider-safety-limiter"]
+	path = supercollider-safety-limiter
+	url = https://github.com/nhthn/supercollider-safety-limiter
+[submodule "portedplugins"]
+	path = portedplugins
+	url = https://github.com/madskjeldgaard/portedplugins
