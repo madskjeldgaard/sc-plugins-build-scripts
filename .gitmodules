@@ -10,3 +10,9 @@
 [submodule "portedplugins"]
 	path = portedplugins
 	url = https://github.com/madskjeldgaard/portedplugins
+[submodule "squinewave"]
+	path = squinewave
+	url = https://github.com/required-field/squinewave
+[submodule "XPlayBuf"]
+	path = XPlayBuf
+	url = https://github.com/elgiano/XPlayBuf
