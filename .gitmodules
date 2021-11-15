@@ -16,3 +16,6 @@
 [submodule "XPlayBuf"]
 	path = XPlayBuf
 	url = https://github.com/elgiano/XPlayBuf
+[submodule "mi-UGens"]
+	path = mi-UGens
+	url = https://github.com/v7b1/mi-UGens
