@@ -17,6 +17,7 @@ git submodule update --init --recursive
 
 if [ -d build ]; then
 	rm -rf build
+	mkdir build
 else
 	mkdir build
 fi
@@ -26,6 +27,7 @@ cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release -DSC_PATH="$SC_LOCATION" -DCMAKE_INSTALL_PREFIX="$INSTALL_LOCATION" -DCMAKE_OSX_ARCHITECTURES="$OSX_ARCH" && \
 	cmake --build . --config Release && \
 	cmake --build . --config Release --target install && \
+	cp -av SC3plugins "$INSTALL_LOCATION" && \
 	cd .. && \
 	rm -rf build && \
 	echo "Succesfully built and installed $PROJECT_DIR"
