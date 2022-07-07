@@ -24,7 +24,7 @@ fi
 
 cd build
 
-cmake .. -DCMAKE_BUILD_TYPE=Release -DSC_PATH="$SC_LOCATION" -DCMAKE_INSTALL_PREFIX="$INSTALL_LOCATION" -DCMAKE_OSX_ARCHITECTURES="$OSX_ARCH" && \
+cmake .. -DCMAKE_BUILD_TYPE=Release -DSC_PATH="$SC_LOCATION" -DSUPERNOVA=ON -DCMAKE_INSTALL_PREFIX="$INSTALL_LOCATION" -DCMAKE_OSX_ARCHITECTURES="$OSX_ARCH" && \
 	cmake --build . --config Release && \
 	cmake --build . --config Release --target install && \
 	cp -av SC3plugins "$INSTALL_LOCATION" && \
