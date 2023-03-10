@@ -22,18 +22,21 @@ else
 	mkdir build
 fi
 
+cd ./vstplugin
+
 # Get VST2
-/vstplugin/.git-ci/get_vst2.sh
+./.git-ci/get_vst2.sh
 
 # Get VST3
-/vstplugin/.git-ci/get_vst3.sh
+./.git-ci/get_vst3.sh
+
+cd ..
 
 cd build;
 
-cmake -DSC=ON -DPD=OFF -DVST2=ON -DVST3=ON -DBUILD_HOST=ON -DBUILD_HOST32=ON -DBUILD_WINE=OFF -DWINE=OFF -DBRIDGE=ON -DSUPERNOVA=ON -DSC_INCLUDEDIR="$SC_LOCATION" -DCMAKE_BUILD_TYPE=RELEASE -DSC_INSTALLDIR="$INSTALL_LOCATION" .. && \
+cmake -DCMAKE_OSX_ARCHITECTURES="$OSX_ARCH" -DSC=ON -DPD=OFF -DVST2=ON -DVST3=ON -DBUILD_HOST=ON -DBUILD_HOST32=ON -DBUILD_HOST_AMD64=ON -DBUILD_WINE=OFF -DWINE=OFF -DBRIDGE=ON -DSUPERNOVA=ON -DSC_INCLUDEDIR="$SC_LOCATION" -DCMAKE_BUILD_TYPE=RELEASE -DSC_INSTALLDIR="$INSTALL_LOCATION" .. && \
 cmake --build . -j -v && \
 cmake --build . -v -t install && \
-cp -av SC3plugins "$INSTALL_LOCATION" && \
 cd .. && \
 rm -rf build && \
 echo "Succesfully built and installed $PROJECT_DIR"
